@@ -1,0 +1,297 @@
+.bloqueinformacion {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    width: 100vw;
+    height: 70vh; /* Cambia a una altura que desees, 70vh es el 70% de la altura de la ventana */
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    z-index: 1;
+    background-color: rgba(6, 71, 33, 0.7);
+    backdrop-filter: blur(3px);
+    justify-content: center;
+    align-items: center;
+}
+
+.texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los párrafos */
+    padding: 2rem;
+    margin-top: 5px; /* Añade un margen superior para separar del imgcirculo */
+}
+
+.bloqueinformacion p {
+    text-align: center;
+    margin: 10px 10px; /* Mantén el margen */
+    padding: 20px; /* Ajusta el padding */
+    font-size: 20px; /* Tamaño del texto */
+    color: white;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.imgcirculo {
+    position: absolute;
+    top: -20%; /* Ajusta según sea necesario */
+    left: 42%;
+    height: 40%;
+    width: 40%;
+    max-width: 17rem;
+    max-height: 17rem;
+}
+
+.imgcirculo img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.links {
+    display: flex; /* Coloca los íconos uno al lado del otro */
+    gap: 40%; /* Ajusta la separación entre íconos */
+    justify-content: center; /* Alinea los íconos al centro del contenedor */
+}
+
+.links a {
+    text-decoration: none; /* Elimina subrayados en los enlaces */
+}
+
+.links i {
+    font-size: 3rem; /* Ajusta el tamaño de los íconos (puedes cambiar el valor) */
+    color: #ffffff; /* Color de los íconos */
+    transition: transform 0.3s; /* Animación para hacer un efecto visual al pasar el mouse */
+}
+
+.links i:hover {
+    transform: scale(1.2); /* Aumenta ligeramente el tamaño del ícono cuando pasas el mouse por encima */
+}
+
+@media (max-width: 600px) {
+    .bloqueinformacion p {
+        padding: 1px; /* Reduce el padding en pantallas pequeñas */
+        font-size: 14px; /* Ajusta el tamaño del texto */
+    }
+    .imgcirculo {
+        height: 30%; /* Ajusta el tamaño de la imagen en pantallas pequeñas */
+        width: 30%;
+        margin-bottom: 15px; /* Añade margen inferior */
+    }
+
+    .links {
+        gap: 9%; /* Ajusta la separación entre íconos */
+        justify-content: center; /* Alinea los íconos al centro del contenedor */
+    }
+
+    .links i {
+        font-size: 2rem; /* Ajusta el tamaño de los íconos en pantallas pequeñas */
+    }
+}
+
+
+
+@media (max-width: 412px) {
+    .bloqueinformacion {
+        padding: 10px; /* Ajusta el padding en pantallas pequeñas */
+    }
+
+    .texto {
+        margin-top: 10px; /* Ajusta el margen superior para que esté más centrado */
+    }
+
+    .bloqueinformacion p {
+        font-size: 14px; /* Ajusta el tamaño del texto */
+        margin: 5px 0; /* Reduce el margen */
+    }
+
+    .imgcirculo {
+        height: 25%; /* Ajusta el tamaño de la imagen para pantallas más pequeñas */
+        width: 25%;
+    }
+}
+
+@media (max-width: 800px) {
+    .bloqueinformacion .texto p{
+        padding: 15px; /* Reduce el padding en pantallas pequeñas */
+        font-size: 18px; /* Ajusta el tamaño del texto */
+        top: -18%;
+    }
+    .imgcirculo {
+        top: -20%; /* Ajusta la posición de la imagen en pantallas pequeñas */
+        left: 35%; /* Cambia la posición para centrar mejor en pantallas pequeñas */
+        height: 30%;
+        width: 30%;
+    }
+
+}
+
+@media (max-width: 1500px) {
+    .bloqueinformacion p {
+        padding: 9px; /* Reduce el padding en pantallas pequeñas */
+        font-size: 20px; /* Ajusta el tamaño del texto */
+        top: -109px;
+    }
+    .imgcirculo {
+        top: -15%; /* Ajusta la posición de la imagen en pantallas pequeñas */
+        left: 37%; /* Cambia la posición para centrar mejor en pantallas pequeñas */
+    }
+
+}
+
+
+/*--------------------------------------------------------------------*/
+
+
+.bloquegaleria{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    z-index: 1;
+    background-color: rgb(200, 237, 205);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.bloquegaleria p{
+    position: relative;
+    text-align: center;
+    margin: 0;
+    padding: 40px;
+    color: rgb(6, 71, 33);
+    font-size: 40px;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.carousel-item {
+    height: 100%;
+    max-height: 29rem;
+    margin: auto;
+    
+}
+
+.imggaleria{
+    padding: 5rem;
+    min-width: 80vw;
+    max-width: 100%;
+    min-height: 20rem;
+    max-height: 39rem;
+    aspect-ratio: 3/4;
+    background-color:  rgba(86, 116, 90, 0.661);
+    
+}
+
+.imggaleria img{
+    
+    object-fit: contain;
+    object-position: center center;
+    max-height: inherit;
+    max-width: 100%;
+    /*border: solid blue 5px;*/
+
+}
+
+.circulo{
+    left: -.4rem;
+    top: -.5rem;
+    width: 150%;
+    height: 150%;
+    background:  rgb(83, 130, 62);
+    display: block;
+    border-radius: 100%;
+    z-index: -1;
+    position: relative;
+}
+
+.circulo2{
+    left: -.6rem;
+    top: -.5rem;
+    width: 150%;
+    height: 150%;
+    background:  rgb(83, 130, 62);
+    display: block;
+    border-radius: 100%;
+    z-index: -1;
+    position: relative;
+}
+
+@media (max-width: 600px) {
+    .imggaleria {
+        padding: 1rem;
+    }
+
+    .carousel-item {
+        max-height: 20rem;
+    }
+}
+
+/*---------------------------------------------------------------------*/
+
+.bloqueprecios {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: auto;
+    z-index: 1;
+    background-color: rgb(61, 42, 35);
+    display: flex;
+    flex-direction: row; /* Cambia a fila para pantallas más grandes */
+    justify-content: space-evenly; /* Distribuye las imágenes uniformemente */
+    align-items: flex-start;
+    gap: 1rem;
+    flex-wrap: wrap; /* Permite que los elementos salten a la siguiente fila si es necesario */
+}
+
+.textoprecios {
+    position: relative;
+    text-align: center;
+    margin: 0;
+    padding: 5px;
+    font-size: 50px; /* Puedes ajustar el tamaño del texto si es necesario */
+    font-weight: bold;
+    color: rgb(200, 237, 205);
+    z-index: 2;
+    width: 100%;
+}
+
+.imgprecios1, .imgprecios2 {
+    position: relative;
+    width: 45%; /* Asegura que ambas imágenes compartan el espacio en pantallas grandes */
+    height: auto;
+    padding: 2%;
+    max-width: 500px; /* Evita que las imágenes crezcan demasiado */
+}
+
+/* Media query para pantallas de hasta 900px */
+@media (max-width: 900px) {
+    .bloqueprecios {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        align-items: center;
+    }
+
+    .imgprecios1, .imgprecios2 {
+        width: 90%; /* Ocupa casi todo el ancho en pantallas más pequeñas */
+        max-width: none; /* Evita que el max-width limite las imágenes */
+    }
+}
+
+/* Media query específica para pantallas más pequeñas, como móviles */
+@media (max-width: 600px) {
+    .textoprecios {
+        font-size: 35px; /* Disminuye el tamaño del texto en pantallas pequeñas */
+    }
+    
+    .imgprecios1, .imgprecios2 {
+        width: 100%; /* Asegura que las imágenes ocupen todo el ancho disponible */
+        padding: 1rem; /* Añade espacio alrededor de las imágenes */
+    }
+}
+/*-----------------------------------------------*/
